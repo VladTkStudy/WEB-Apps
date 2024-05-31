@@ -1,0 +1,239 @@
+/*
+Theme Name: coffeesweeper
+Theme URI: http://coffeesweeper.com/theme
+Author: Vlad Tk
+Author URI: http://example.com
+Description: A custom theme for WordPress
+Version: 1.0
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+html,
+body {
+    background: linear-gradient(to bottom, #221f1f, #161616);
+    width: 100%;
+    height: 94%;
+    font-family: Consolas, monospace;
+    font-weight: bold;
+    font-size: 24px;
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, 1);
+}
+
+.container {
+    background-color: #1c1818;
+    max-width: 1250px;
+    margin: 0 auto;
+}
+
+.logo {
+    background: linear-gradient(to bottom, #4b4444, #362e2e);
+    width: 370px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img {
+    margin-bottom: 6%;
+}
+
+header {
+    width: 100%;
+    margin-top: 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer {
+    width: 100%;
+    margin-top: 5%;
+    background-color: #322b2b;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navigation {
+    background: linear-gradient(to bottom, #4b4444, #362e2e);
+    height: 100px;
+    width: 820px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.game-bar-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.game-bar-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: aliceblue;
+    font-size: 50px;
+}
+
+.nav-item {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.nav-item a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 14px 0px;
+    text-wrap: nowrap;
+    position: relative;
+}
+
+.nav-item a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: coral;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-item a:hover::before {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+.menu-item {
+    color: #fff;
+    text-decoration: none;
+    padding-top: 5px;
+    padding-left: 40px;
+}
+
+.menu-item a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.menu-header {
+    padding-top: 10px;
+    text-align: center;
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0);
+    font-size: 25px;
+    color: rgb(127, 108, 108);
+    text-decoration: none;
+}
+
+.menu {
+    background: linear-gradient(to bottom, #4b4444, #362e2e);
+    width: 370px;
+    height: 550px;
+}
+
+.menu-block {
+    margin-top: 5%;
+}
+
+.menu-block img {
+    margin-top: 6%;
+    margin-left: 10%;
+}
+
+.game {
+    background: linear-gradient(to bottom, #4b4444, #362e2e);
+    width: 820px;
+    height: 550px;
+}
+
+.game-bar {
+    background-color: #5d5050;
+    width: 100%;
+    height: 12%;
+}
+
+.minesweeper-grid {
+    margin: 4%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(10, 40px);
+    gap: 2px;
+}
+
+.minesweeper-grid div {
+    width: 40px;
+    height: 40px;
+    background-color: #b1a0a0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #909090;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.minesweeper-grid div.checked {
+    background-color: #6f6060;
+}
+
+.minesweeper-grid div.flag {
+    background-color: rgb(252, 183, 183);
+}
+
+.help-block, .options-block {
+    position: absolute;
+    width: 1250px;
+    height: 550px;
+    display: none;
+    z-index: 999;
+}
+
+.help-bar, .options-bar {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, #4b4444, #362e2e);
+    position: absolute;
+}
+
+.help-bar div, .options-bar div {
+    margin: 35px;
+    color: white;
+}
+
+.help-container, .options-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#apply-settings {
+    width: 215px;
+    height: 40px;
+    margin-left: 30px;
+    font-size: 25px;
+}
+
+#grid-width, #grid-height, #bomb-amount {
+    width: 100px;
+    height: 40px;
+    font-size: 20px;
+    text-align: center;
+}
